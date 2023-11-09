@@ -2,13 +2,16 @@
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body
 {
-    background-color: rgb(197, 197, 197);
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(197, 197, 197); */
+    overflow-x: hidden;
 }
 .webgl
 {
@@ -65,4 +68,65 @@ body
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+.main {
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 8000px;
+    overflow: hidden;
+    position: relative;
+}
+.main #section-01{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.main #section-01 img {
+    position: absolute;
+    width: 28px;
+}
+.main #section-01 img.top-left {
+    top: 0;
+    left: 0;
+}
+.main #section-01 img.top-right {
+    top: 0;
+    right: 0;
+    transform: scaleX(-1);
+}
+.main #section-01 .top-box {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+}
+.main #section-01 .bottom-box {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+}
+.main #section-01 .side-box{
+    background-color: black;
+    position: absolute;
+    width: 12px;
+    height: 100%;
+}
+.main #section-01 .left-box {
+    top: 0;
+    left: 0;
+}
+.main #section-01 .right-box {
+    top: 0;
+    right: 0;
+}
+
+main #section-02 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color:aqua ;
 }
