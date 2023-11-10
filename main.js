@@ -12,11 +12,13 @@ THREE.ColorManagement.enabled = false
  * Models
  */
 const gltfLoader = new GLTFLoader()
+let gltf;
 
 gltfLoader.load(
     '/static/models/ummmb/ummmb.gltf',
-    (gltf) => {
+    (loadedGltf) => {
         // console.log(gltf.scene.children[1])
+        gltf = loadedGltf;
 
         gltf.scene.scale.set(2, 2, 2)
         gltf.scene.children[0].material = bodyMaterial
@@ -199,13 +201,13 @@ window.addEventListener('resize', () => {
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(70, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(2.3, .8, 2)
+camera.position.set(2, .8, 2)
 scene.add(camera)
 
 // Controls
-const controls = new OrbitControls(camera, canvas)
-controls.target.set(0, 0.55, 0)
-controls.enableDamping = true
+// const controls = new OrbitControls(camera, canvas)
+// controls.target.set(0, 0.55, 0)
+// controls.enableDamping = true
 /**
  * Directional light
  */
@@ -270,7 +272,7 @@ const tick = () => {
     previousTime = elapsedTime
 
     // Update controls
-    controls.update()
+    // controls.update()
 
     // Render
     renderer.render(scene, camera)
