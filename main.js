@@ -6,9 +6,6 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 let cursorControl = false;
 
-const resizeButton = document.getElementById("resize-button");
-const textureLoader = new THREE.TextureLoader();
-
 const sceneControl = [
   {
     // scene num 0
